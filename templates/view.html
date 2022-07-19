@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}View Results{% endblock %}
+{% block content %}
+<h2>Results table</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>Member</th>
+    <th>Channel</th>
+    <th>Time</th>
+    <th>Group</th>
+  </tr>
+    {% for item in values %}
+    <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.member}}</td>
+        <td>{{item.channel}}</td>
+        <td>{{item.time}}</td>
+        <td>{{item.group}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
